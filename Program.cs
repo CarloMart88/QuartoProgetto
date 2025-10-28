@@ -8,6 +8,37 @@ class Player
   private int healingCapacity = 15;
   private int maxHealth = 100;
 
+  public int Health
+  {
+    //GETTER
+    get
+    {
+      return health;
+    }
+    //SETTER
+    private set
+    {
+      // If the value provided is negative, store zero instead
+      if (value < 0)
+        health = 0;
+      // if the value exceeds maximum health
+      else if (value > maxHealth)
+      {
+        health = maxHealth;
+      }
+      //set the provided value if both the conditions are false
+      else
+      {
+        health = value;
+      }
+    }
+  }
+
+  //now we need to call spawnplayer in player
+  public Player()
+  {
+    SpawnPlayer();
+  }
   private void SpawnPlayer()
   {
     Console.WriteLine("\\n==================================================");
