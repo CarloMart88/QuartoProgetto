@@ -1,8 +1,36 @@
 ﻿using System;
 
+class Program
+{
+  static void Main()
+  {
+    string separator = "====================================================";
+    string subSeparator = "----------------------------------------------------";
+
+    // Introduzione narrativa
+    Console.WriteLine(separator);
+    Console.WriteLine("               🍕 MIDNIGHT PIZZA 🍕");
+    Console.WriteLine(separator);
+    Console.WriteLine("In a bustling pizzeria on a busy Friday night...");
+    Console.WriteLine(subSeparator);
+    Console.WriteLine("You, the Dough Master, created your magnum opus - \n the perfect pizza🤌 Suddenly, a sneaky Crust Bandit\n snatches your masterpieces!");
+    Console.WriteLine(subSeparator);
+    Console.WriteLine("Fueled by passion for your craft, you give chase...");
+    Console.WriteLine(subSeparator);
+    Console.WriteLine("Through winding alleys and crowded streets, you \n pursue the pizza pilferer. Finally, the Thief is\n cornered in a dead-end alley. It's time to recover \n your stolen slice!");
+    Console.WriteLine(subSeparator);
+    Console.WriteLine("                    🍕 FIGHT !🍕\n");
+
+    // Spawn dei personaggi
+    Player player = new Player();
+    Enemy enemy = new Enemy();
+
+    // Puoi aggiungere qui un loop di combattimento o interazioni
+  }
+}
+
 class Player
 {
-  // we gonna create the basement of our player 
   private int health = 100;
   private int attackDamage = 20;
   private int healingCapacity = 15;
@@ -10,101 +38,46 @@ class Player
 
   public int Health
   {
-    //GETTER
-    get
-    {
-      return health;
-    }
-    //SETTER
-    private set
-    {
-      // If the value provided is negative, store zero instead
-      if (value < 0)
-        health = 0;
-      // if the value exceeds maximum health
-      else if (value > maxHealth)
-      {
-        health = maxHealth;
-      }
-      //set the provided value if both the conditions are false
-      else
-      {
-        health = value;
-      }
-    }
+    get => health;
+    private set => health = Math.Clamp(value, 0, maxHealth);
   }
 
-  //now we need to call spawnplayer in player
   public Player()
   {
     SpawnPlayer();
   }
+
   private void SpawnPlayer()
   {
     Console.WriteLine("\n==================================================");
     Console.WriteLine(" 🍕 DOUGH MASTER: GUARDIAN OF THE GOLDEN CRUST 🍕 ");
-    Console.WriteLine("==================================================\\n");
-    Console.WriteLine("\nDough Master: That scoundrel won't escape with my creation!\n");
+    Console.WriteLine("==================================================\n");
+    Console.WriteLine("Dough Master: That scoundrel won't escape with my creation!\n");
   }
-
 }
 
 class Enemy
 {
-  // we gonna create the basement of our player 
-  private int health = 80;
+  private int health = 150;
   private int attackDamage = 10;
-  private int healingCapacity = 10;
-  private int maxHealth = 80;
+  private int maxHealth = 150;
 
   public int Health
   {
-    //GETTER
-    get
-    {
-      return health;
-    }
-    //SETTER
-    private set
-    {
-      // If the value provided is negative, store zero instead
-      if (value < 0)
-        health = 0;
-      // if the value exceeds maximum health
-      else if (value > maxHealth)
-      {
-        health = maxHealth;
-      }
-      //set the provided value if both the conditions are false
-      else
-      {
-        health = value;
-      }
-    }
+    get => health;
+    private set => health = Math.Clamp(value, 0, maxHealth);
   }
 
-  //now we need to call spawnEnemy in Enemy
   public Enemy()
   {
     SpawnEnemy();
   }
+
   private void SpawnEnemy()
   {
     Console.WriteLine("\n==================================================");
     Console.WriteLine(" 🦹 CRUST BANDIT: NEMESIS OF ITALIAN CUISINE 🦹 ");
     Console.WriteLine("==================================================\n");
-    Console.WriteLine("\nYou'll never catch me, flour face!\n");
-  }
-
-}
-
-class Program
-{
-  static void Main()
-  {
-
-    // same thing is gonna be for the enemy
-    Player player = new Player(); //Creating and Spawning the Player Character
-    Enemy enemy = new Enemy(); //Creating and Spawning the Enemy Character
+    Console.WriteLine("Crust Bandit: You'll never catch me, flour face!\n");
   }
 }
