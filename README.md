@@ -1,13 +1,27 @@
-# 🍕 QuartoProgetto — Creazione del Personaggio: Dough Master
+🍕 Dough Master: Guardian of the Golden Crust
+Un piccolo progetto in C# per esercitarsi con la programmazione orientata agli oggetti, la gestione dello stato e la stampa narrativa in console. Il protagonista è il leggendario Dough Master, pronto a difendere la sua creazione dalla minaccia del Crust Bandit!
 
-In questo progetto ho creato il personaggio principale del mio gioco fantasy: il **Dough Master**, guardiano della crosta dorata.  
-L'obiettivo è introdurre i concetti fondamentali della programmazione orientata agli oggetti in C#, costruendo una classe `Player` completa e funzionale.
+✅ Funzionalità attuali
+Classe Player
 
----
+Proprietà Health con validazione (min/max)
 
-## 📌 Obiettivi
+Variabili private: health, maxHealth, attackDamage, healingCapacity
 
-- Creare una classe `Player` con campi privati
-- Inizializzare attributi come salute, attacco e guarigione
-- Stampare un messaggio narrativo al momento della creazione del personaggio
-- Implementare una **proprietà** per gestire la
+Metodo SpawnPlayer() con messaggio introduttivo
+
+Costruttore che avvia automaticamente lo spawn
+
+Classe Enemy
+
+Struttura simile al Player, con valori adattati
+
+Metodo SpawnEnemy() con messaggio personalizzato
+
+Costruttore che stampa la comparsa del nemico
+
+Classe Program
+
+Metodo Main() che istanzia Player e Enemy
+
+Avvio narrativo del gioco in console

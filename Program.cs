@@ -83,7 +83,7 @@ class Enemy
     }
   }
 
-  //now we need to call spawnplayer in player
+  //now we need to call spawnEnemy in Enemy
   public Enemy()
   {
     SpawnEnemy();
