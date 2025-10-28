@@ -2,8 +2,9 @@
 
 class Player
 {
-  static void Main()
-  {
-    Console.Write("Hello visitors now we gonna create a new class Player!");
-  }
+  // we gonna create the basement of our player 
+  private int health = 100;
+  private int attackDamage = 20;
+  private int healingCapacity = 15;
+  private int maxHealth = 100;
 }
