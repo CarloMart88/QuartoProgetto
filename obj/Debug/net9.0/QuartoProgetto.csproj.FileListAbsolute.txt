@@ -12,3 +12,4 @@ C:\Users\LENOVO\Desktop\video.games\QuartoProgetto\obj\Debug\net9.0\refint\Quart
 C:\Users\LENOVO\Desktop\video.games\QuartoProgetto\obj\Debug\net9.0\QuartoProgetto.pdb
 C:\Users\LENOVO\Desktop\video.games\QuartoProgetto\obj\Debug\net9.0\QuartoProgetto.genruntimeconfig.cache
 C:\Users\LENOVO\Desktop\video.games\QuartoProgetto\obj\Debug\net9.0\ref\QuartoProgetto.dll
+C:\Users\LENOVO\Desktop\video.games\QuartoProgetto\obj\Debug\net9.0\QuartoProgetto.sourcelink.json

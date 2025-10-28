@@ -46,4 +46,14 @@ class Player
     Console.WriteLine("==================================================\\n");
     Console.WriteLine("\\nDough Master: That scoundrel won't escape with my creation!\\n");
   }
+
+}
+class Program
+{
+  static void Main()
+  {
+    //...some other code
+
+    Player player = new Player(); //Creating and Spawning the Player Character
+  }
 }
